@@ -1,0 +1,162 @@
+/*Variables*/
+:root{
+  --primary-button: #171815;
+  --secondary: #686A63;
+  --warm-surface: #F3F1EA;
+  --light-surface: #FAF9F5;
+  --accent: #C9F06B;
+  --border-color: #CFD0C8;
+  --active: #333333;
+}
+/*Reset*/
+*{
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol{
+  list-style: none;
+}
+/*Base Styles*/
+body{
+  background-color: var(--warm-surface);
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+nav{
+  padding: 20px 25px 5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.button{
+  border: none; 
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+
+.nav--bar{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 35px;
+
+  grid-template-areas: 
+  "title contact"
+  "links links";
+  gap: 10px;
+}
+
+.nav--title{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav--title h1{
+  font-size: 19px;
+  font-weight: 500;
+  color: black;
+}
+
+.nav--links{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 40px;
+}
+
+.nav--links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--links li a{
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+
+.nav--contact{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav--contact a{
+  color: var(--primary-button);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.nav--contact #contact--button{
+    background: var(--accent);
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+#active{
+  font-size: 15px;
+  font-weight: 800;
+    color: var(--active);
+}
+
+.nav--circle{
+  display: none;
+}
+/*Fonts*/
+
+/*Mobile Style*/
+
+/*Small tablets Style*/
+@media screen and (min-width: 620px) {
+
+}
+
+/*large tablets and Laptops Style*/
+@media screen and (min-width: 960px) {
+  .nav--bar {
+      padding: 15px 50px 15px 55px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      grid-template-rows: 50px;
+      grid-template-areas:
+        "title links contact";
+      gap: 25px;
+    }
+
+    .nav--title h1 {
+        font-size: 20px;
+    }
+
+    .nav--title{
+      gap: 10px;
+    }
+
+    .nav--circle{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid var(--primary-button);
+      height: 15px;
+      width: 15px;
+      background: var(--accent);
+    }
+
+    .nav--links {
+      display: grid;
+      gap: 20px;
+    }
+
+    .nav--contact #contact--button {
+      background: var(--primary-button);
+      color: var(--light-surface);
+      font-weight: 300;
+    }
+}
+
+/*Desktop Style*/
+@media screen and (min-width: 1200px) {
+}
